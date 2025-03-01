@@ -1,7 +1,7 @@
 # Hi there, I'm PingVortex! 👋
 
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=pingvortex&show_icons=true&theme=radical)](https://github.com/pingvortex)
-[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=pingvortex&layout=compact&theme=radical)](https://github.com/pingvortex)
+[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=pingvortex&show_icons=true&theme=synthwave&hide=issues,prs)](https://github.com/pingvortex)
+[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=pingvortex&layout=compact&theme=synthwave)](https://github.com/pingvortex)
 
 I'm a **Python enthusiast** 🐍 who loves building fun and creative projects. Whether it's APIs, AI, or automation scripts, I enjoy turning ideas into reality. Check out my repositories to see what I've been working on!
 
