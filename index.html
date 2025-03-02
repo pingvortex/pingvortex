@@ -46,7 +46,7 @@
             margin-bottom: 20px;
             font-weight: 600;
         }
-        .bio, .skills, .contact {
+        .bio, .skills, .contact, .links {
             background-color: #1a001f;
             padding: 40px;
             margin-bottom: 30px;
@@ -54,18 +54,18 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             transition: background-color 0.3s ease;
         }
-        .bio:hover, .skills:hover, .contact:hover {
+        .bio:hover, .skills:hover, .contact:hover, links:hover{
             background-color: #2c003e;
         }
-        .bio p, .skills p, .contact p {
+        .bio p, .skills p, .contact p, .links p{
             font-size: 1.1rem;
             font-weight: 300;
         }
-        .skills ul {
+        .skills ul, .links ul {
             list-style-type: none;
             padding: 0;
         }
-        .skills li {
+        .skills li, .links li {
             font-size: 1.2rem;
             margin: 10px 0;
             color: #fff;
@@ -103,6 +103,9 @@
             }
         }
     </style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
 
@@ -113,7 +116,7 @@
 
 <section class="bio">
     <h2>About Me</h2>
-    <p>Hi, I'm PingVortex! I'm a passionate tech enthusiast who loves working on Discord bots, learning Python, and diving into AI development. I enjoy sharing knowledge and building cool things for the community. In my free time, I want tp create content on YouTube and connect with like-minded individuals online.</p>
+    <p>Hi, I'm PingVortex! I'm a passionate tech enthusiast who loves working on Discord bots, learning Python, and diving into AI development. I enjoy sharing knowledge and building cool things for the community. In my free time, I want to create content on <a href="https://YouTube.com/@PingVortex" target="_blank">YouTube</a> and connect with like-minded individuals online.</p>
 </section>
 
 <section class="skills">
@@ -127,9 +130,18 @@
     </ul>
 </section>
 
+<section class="links">
+    <h2>Links</h2>
+    <ul>
+    <li><a href="https://discord.gg/Efe5ws6jcP" target="_blank">Discord server</a><i class="fa-brands fa-discord"></i></li>
+    <li><a href="https://github.com/pingvortex" target="_blank">GitHub</a><i class="fa-brands fa-github"></i></li>
+    <li><a href="https://youtube.com/@pingvortex" target="_blank">YouTube</a><i class="fa-brands fa-youtube"></i></li>
+    </ul>
+</section>
+
 <section class="contact">
     <h2>Contact</h2>
-    <p>If you'd like to get in touch, feel free to connect with me on my Discord server or reach out via email at <a href="mailto:pingvortex@gmail.com">pingvortex@gmail.com</a>.</p>
+    <p>If you'd like to get in touch, feel free to connect with me on my <a href="https://discord.gg/Efe5ws6jcP" target="_blank">Discord server</a> or reach out via email at <a href="mailto:pingvortex@gmail.com">pingvortex@gmail.com</a>.</p>
 </section>
 
 <footer>
