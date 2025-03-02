@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         :root {
-            --background: hsl(0, 0%, 0%);
-            --foreground: hsl(0, 0%, 98%);
-            --card: hsl(0, 0%, 8%);
-            --card-foreground: hsl(0, 0%, 98%);
-            --primary: hsl(0, 0%, 90%);
-            --primary-foreground: hsl(0, 0%, 10%);
-            --muted: hsl(0, 0%, 15%);
-            --muted-foreground: hsl(0, 0%, 70%);
-            --border: hsl(0, 0%, 14%);
-            --radius: 1rem;
+            --background: #0a0a0a;
+            --foreground: #f5f5f5;
+            --card: #1a1a1a;
+            --card-foreground: #f5f5f5;
+            --primary: #9b5de5;
+            --primary-foreground: #ffffff;
+            --muted: #333333;
+            --muted-foreground: #a0a0a0;
+            --border: #444444;
+            --radius: 12px;
         }
 
         * {
@@ -30,12 +30,12 @@
         body {
             background-color: var(--background);
             color: var(--foreground);
-            line-height: 1.5;
-            margin-top: 20px;
+            line-height: 1.6;
+            margin: 0;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 2rem;
         }
@@ -43,166 +43,68 @@
         .header {
             text-align: center;
             margin-bottom: 3rem;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        radial-gradient(800px circle at 0px 0px, var(--primary-foreground), transparent 40%);
-            padding: 69px;
+            padding: 4rem 1rem;
+            background: linear-gradient(135deg, #6a1b9a, #1f0033);
             border-radius: var(--radius);
-            border: 1px solid var(--border);
-            position: relative;
-            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
 
         .header h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 700;
-            line-height: 1.2;
-            background: linear-gradient(45deg, #9b5de5, #ff6b6b);
+            background: linear-gradient(45deg, #ff6b6b, #9b5de5);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
         }
 
         .header p {
+            font-size: 1.2rem;
             color: var(--muted-foreground);
-            margin-top: 0.5rem;
         }
 
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
-            color: var(--foreground);
+            color: var(--primary);
         }
 
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
+        .section {
+            margin-bottom: 3rem;
         }
 
-        .project-card {
+        .section-content {
             background: var(--card);
-            border: 1px solid var(--border);
+            padding: 2rem;
             border-radius: var(--radius);
-            padding: 1.5rem;
-            transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .project-card:hover {
-            transform: translateY(-2px);
-        }
-
-        .card-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+        .section-content p {
+            color: var(--muted-foreground);
             margin-bottom: 1rem;
         }
 
-        .icon {
-            font-size: 1.5rem;
-            width: 2.5rem;
-            height: 2.5rem;
+        .skills-list, .links-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills-list li, .links-list li {
+            margin-bottom: 1rem;
             display: flex;
             align-items: center;
-            justify-content: center;
-            background: var(--muted);
-            border-radius: 0.5rem;
+            gap: 1rem;
         }
 
-        .description {
-            color: var(--muted-foreground);
-            margin-bottom: 1.5rem;
-        }
-
-        .card-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            text-decoration: none;
+        .skills-list i, .links-list i {
+            font-size: 1.2rem;
             color: var(--primary);
-            font-weight: 500;
-            transition: all 0.2s ease;
-        }
-
-        .card-link:hover {
-            background-color: var(--primary);
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            font-weight: 700;
-            color: black;
-        }
-
-        .language-badges {
-            display: flex;
-            gap: 0.5rem;
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
-            flex-wrap: wrap;
-        }
-
-        .language-badge {
-            padding: 0.25rem 0.5rem;
-            border-radius: 24px;
-            font-size: 0.75rem;
-            font-weight: 500;
-            text-transform: uppercase;
-        }
-
-        .language-badge.python { background: #3776AB; color: white; }
-        .language-badge.js { background: #F7DF1E; color: black; }
-        .language-badge.html { background: #E34F26; color: white; }
-        .language-badge.css { background: #1572B6; color: white; }
-
-        .chat-bar {
-            position: sticky;
-            top: 20px;
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-            z-index: 100;
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 0.75rem 1rem;
-        }
-
-        #chat-input {
-            flex: 1;
-            background: transparent;
-            border: none;
-            color: var(--card-foreground);
-            font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
-            padding: 0.5rem;
-            outline: none;
-        }
-
-        #chat-input:focus {
-            outline: none;
-        }
-
-        #chat-input::placeholder {
-            color: var(--muted-foreground);
-        }
-
-        #chat-send {
-            background: transparent;
-            border: none;
-            color: var(--muted);
-            cursor: pointer;
-            padding: 0.25rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: color 0.2s ease;
-        }
-
-        #chat-send:hover {
-            color: var(--foreground);
         }
 
         .chat-container {
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
 
         .chat-messages {
@@ -211,30 +113,82 @@
             margin-bottom: 1rem;
             padding: 1rem;
             background: var(--card);
-            border: 1px solid var(--border);
             border-radius: var(--radius);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
         .message {
             margin-bottom: 1rem;
-            padding: 0.5rem 1rem;
+            padding: 0.75rem 1rem;
             border-radius: var(--radius);
             background: var(--muted);
             color: var(--foreground);
+            max-width: 80%;
         }
 
         .message.user {
             background: var(--primary);
             color: var(--primary-foreground);
             margin-left: auto;
-            max-width: 70%;
         }
 
         .message.bot {
             background: var(--card);
             color: var(--foreground);
             margin-right: auto;
-            max-width: 70%;
+        }
+
+        .chat-bar {
+            display: flex;
+            gap: 0.5rem;
+            background: var(--card);
+            padding: 0.75rem;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        #chat-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: var(--foreground);
+            font-size: 1rem;
+            padding: 0.5rem;
+            outline: none;
+        }
+
+        #chat-input::placeholder {
+            color: var(--muted-foreground);
+        }
+
+        #chat-send {
+            background: var(--primary);
+            border: none;
+            color: var(--primary-foreground);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        #chat-send:hover {
+            background: #7c4dff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--muted-foreground);
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        footer a:hover {
+            color: #ff6b6b;
         }
 
         @media (max-width: 768px) {
@@ -243,17 +197,16 @@
             }
 
             .header h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
 
             .chat-bar {
                 position: fixed;
-                bottom: 20px;
-                top: auto;
-                left: 1rem;
-                right: 1rem;
-                margin-bottom: 0;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                bottom: 0;
+                left: 0;
+                right: 0;
+                border-radius: 0;
+                box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
             }
         }
     </style>
@@ -262,7 +215,7 @@
     <main class="container">
         <header class="header">
             <h1>PingVortex</h1>
-            <p class="subtitle">Discord Enthusiast | AI Explorer | Python Programmer</p>
+            <p>Discord Enthusiast | AI Explorer | Python Programmer</p>
         </header>
 
         <div class="chat-container">
@@ -275,89 +228,35 @@
             </div>
         </div>
 
-        <h2>About Me</h2>
-        <section class="projects-grid">
-            <article class="project-card">
-                <div class="card-header">
-                    <div class="icon"><i class="fas fa-hand-peace"></i></div>
-                    <h2>Who Am I?</h2>
-                </div>
-                <p class="description">Hey there! I’m PingVortex, a passionate tech enthusiast who loves Python, AI, and Discord bots. I’m also fascinated by AI and ML. Beyond coding, I enjoy sharing my knowledge and experiences with others.</p>
-            </article>
+        <section class="section">
+            <h2>About Me</h2>
+            <div class="section-content">
+                <p>Hey there! I’m PingVortex, a passionate tech enthusiast who loves Python, AI, and Discord bots. I’m also fascinated by AI and ML. Beyond coding, I enjoy sharing my knowledge and experiences with others.</p>
+            </div>
         </section>
 
-        <h2>Skills & Interests</h2>
-        <section class="projects-grid">
-            <article class="project-card">
-                <div class="card-header">
-                    <div class="icon"><i class="fas fa-robot"></i></div>
-                    <h2>Discord Bot Development</h2>
-                </div>
-                <p class="description">I specialize in creating interactive and functional Discord bots using Python and various APIs.</p>
-                <div class="language-badges">
-                    <span class="language-badge python">Python</span>
-                </div>
-            </article>
-            <article class="project-card">
-                <div class="card-header">
-                    <div class="icon"><i class="fab fa-python"></i></div>
-                    <h2>Python Programming</h2>
-                </div>
-                <p class="description">Python is my language for building everything from scripts to web applications.</p>
-                <div class="language-badges">
-                    <span class="language-badge python">Python</span>
-                </div>
-            </article>
-            <article class="project-card">
-                <div class="card-header">
-                    <div class="icon"><i class="fas fa-brain"></i></div>
-                    <h2>AI & Machine Learning</h2>
-                </div>
-                <p class="description">I’m deeply interested in AI and ML, exploring how they can solve real-world problems.</p>
-                <div class="language-badges">
-                    <span class="language-badge python">Python</span>
-                </div>
-            </article>
+        <section class="section">
+            <h2>Skills & Interests</h2>
+            <div class="section-content">
+                <ul class="skills-list">
+                    <li><i class="fas fa-robot"></i>Discord Bot Development</li>
+                    <li><i class="fab fa-python"></i>Python Programming</li>
+                    <li><i class="fas fa-brain"></i>AI & Machine Learning</li>
+                    <li><i class="fas fa-code"></i>Web Development</li>
+                    <li><i class="fas fa-video"></i>YouTube Content Creation (Soon)</li>
+                </ul>
+            </div>
         </section>
 
-        <h2>My GitHub Repositories</h2>
-        <section class="projects-grid">
-            <article class="project-card">
-                <div class="card-header">
-                    <div class="icon"><i class="fas fa-folder-open"></i></div>
-                    <h2>GitHub Projects</h2>
-                </div>
-                <p class="description">Check out my GitHub repositories for some of my latest projects and contributions.</p>
-                <ul id="repos-list"></ul>
-            </article>
-        </section>
-
-        <h2>Let's Connect</h2>
-        <section class="projects-grid">
-            <article class="project-card">
-                <div class="card-header">
-                    <div class="icon"><i class="fab fa-discord"></i></div>
-                    <h2>Discord</h2>
-                </div>
-                <p class="description">Join my Discord server to chat about tech, collaborate, or just hang out!</p>
-                <a href="https://discord.gg/Efe5ws6jcP" target="_blank" class="card-link">Join My Discord →</a>
-            </article>
-            <article class="project-card">
-                <div class="card-header">
-                    <div class="icon"><i class="fab fa-github"></i></div>
-                    <h2>GitHub</h2>
-                </div>
-                <p class="description">Explore my code and projects on GitHub.</p>
-                <a href="https://github.com/pingvortex" target="_blank" class="card-link">Visit My GitHub →</a>
-            </article>
-            <article class="project-card">
-                <div class="card-header">
-                    <div class="icon"><i class="fab fa-youtube"></i></div>
-                    <h2>YouTube</h2>
-                </div>
-                <p class="description">Subscribe to my YouTube channel!</p>
-                <a href="https://youtube.com/@pingvortex" target="_blank" class="card-link">Subscribe on YouTube →</a>
-            </article>
+        <section class="section">
+            <h2>Let's Connect</h2>
+            <div class="section-content">
+                <ul class="links-list">
+                    <li><i class="fab fa-discord"></i><a href="https://discord.gg/Efe5ws6jcP" target="_blank">Join My Discord Server</a></li>
+                    <li><i class="fab fa-github"></i><a href="https://github.com/pingvortex" target="_blank">Check Out My GitHub</a></li>
+                    <li><i class="fab fa-youtube"></i><a href="https://youtube.com/@pingvortex" target="_blank">Subscribe on YouTube</a></li>
+                </ul>
+            </div>
         </section>
 
         <footer>
