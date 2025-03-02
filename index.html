@@ -54,7 +54,7 @@
             text-transform: uppercase;
             letter-spacing: 2px;
         }
-        .bio, .skills, .contact, .links {
+        .bio, .skills, .contact, .links, .github-repos {
             background-color: rgba(26, 0, 31, 0.9);
             padding: 50px;
             margin-bottom: 30px;
@@ -63,7 +63,7 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             backdrop-filter: blur(10px);
         }
-        .bio:hover, .skills:hover, .contact:hover, .links:hover {
+        .bio:hover, .skills:hover, .contact:hover, .links:hover, .github-repos:hover {
             transform: translateY(-10px);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
         }
@@ -88,6 +88,25 @@
         .skills li i, .links li i {
             margin-right: 10px;
             color: #9b5de5;
+        }
+        .github-repos ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .github-repos li {
+            font-size: 1.1rem;
+            margin: 15px 0;
+            color: #fff;
+            font-weight: 400;
+            text-align: left;
+        }
+        .github-repos a {
+            color: #9b5de5;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .github-repos a:hover {
+            color: #ff6b6b;
         }
         footer {
             background-color: rgba(26, 0, 31, 0.9);
@@ -117,7 +136,7 @@
         a:hover {
             color: #ff6b6b;
         }
-        /* Media Queries for Responsiveness */
+
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2.8rem;
@@ -125,7 +144,7 @@
             section h2 {
                 font-size: 2.2rem;
             }
-            .bio, .skills, .contact, .links {
+            .bio, .skills, .contact, .links, .github-repos {
                 padding: 30px;
             }
         }
@@ -136,12 +155,20 @@
 
 <header>
     <h1>PingVortex</h1>
-    <p>Discord enthusiast | AI Explorer | Python programmer</p>
+    <p>Discord Enthusiast | AI Explorer | Python Programmer</p>
 </header>
 
 <section class="bio">
     <h2>About Me</h2>
-    <p>Hey there! I’m PingVortex, a tech enthusiast with a passion for creating innovative Discord bots, exploring the depths of Python, and diving into the fascinating world of AI. I thrive on solving problems, building tools that make life easier, and sharing my journey through <a href="https://YouTube.com/@PingVortex" target="_blank">YouTube</a>. Whether it’s coding, learning, or connecting with the community, I’m always up for a new challenge!</p>
+    <p>
+        Hey there! I’m PingVortex, a passionate tech enthusiast who loves Python, AI, and Discord bots.
+    </p>
+    <p>
+        I’m also fascinated by AI and ML. 
+    </p>
+    <p>
+        Beyond coding, I enjoy sharing my knowledge and experiences with others. I’m planning to start a YouTube channel where I’ll share tutorials, project walkthroughs, and insights into the tech world. Collaboration and community are at the heart of what I do, so feel free to reach out if you’d like to connect or work together on something exciting!
+    </p>
 </section>
 
 <section class="skills">
@@ -155,6 +182,13 @@
     </ul>
 </section>
 
+<section class="github-repos">
+    <h2>My GitHub Repositories</h2>
+    <ul id="repos-list">
+        <!-- GitHub repos will be dynamically loaded here (Thank you DeepSeek)-->
+    </ul>
+</section>
+
 <section class="links">
     <h2>Let's Connect</h2>
     <ul>
@@ -165,13 +199,38 @@
 </section>
 
 <section class="contact">
-    <h2>Get in Touch</h2>
-    <p>If you’d like to collaborate, chat about tech, or just say hi, feel free to join my <a href="https://discord.gg/Efe5ws6jcP" target="_blank">Discord server</a> or drop me an email at <a href="mailto:pingvortex@gmail.com">pingvortex@gmail.com</a>. Let’s build something amazing together!</p>
+    <h2>Contact Me!</h2>
+    <p>If you’d like to chat with me about tech, collaboration, or anything else, feel free to join my <a href="https://discord.gg/Efe5ws6jcP" target="_blank">Discord server</a> or drop me an email at <a href="mailto:pingvortex@gmail.com">pingvortex@gmail.com</a>.</p>
 </section>
 
 <footer>
     <p>Created with ❤️ by <a href="https://github.com/pingvortex" target="_blank">PingVortex</a> | © 2025 All Rights Reserved</p>
 </footer>
+
+<script>
+    // Fetch GitHub repositories using the GitHub API (Thank you DeepSeek again)
+const username = "pingvortex";
+const reposList = document.getElementById("repos-list");
+
+fetch(`https://api.github.com/users/${username}/repos`)
+    .then(response => response.json())
+    .then(data => {
+        data.forEach(repo => {
+            const listItem = document.createElement("li");
+
+            if (repo.description) {
+                listItem.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a> - ${repo.description}`;
+            } else {
+                listItem.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a>`;
+            }
+            reposList.appendChild(listItem);
+        });
+    })
+    .catch(error => {
+        console.error("Error fetching GitHub repositories:", error);
+        reposList.innerHTML = "<li>Unable to load repositories.</li>";
+    });
+</script>
 
 </body>
 </html>
