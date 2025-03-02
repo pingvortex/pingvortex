@@ -15,12 +15,6 @@ I'm a **Python enthusiast** 🐍 who loves building fun and creative projects. W
 
 ---
 
-## 🚀 My Projects
-- **[Text-To-Wav](https://github.com/pingvortex/Text-To-Wav)**: A simple API and web interface to generate `.wav` files from text using Python.
-- **[PingVortex Bot API](https://github.com/pingvortex/PingVortexBot)**: A fun API to interact with a bot powered by basic `elif` logic.
-
----
-
 ## 💬 Let's Connect!
 I **love Discord** and am passionate about building and managing Discord servers. If you're into tech, programming, or just want to hang out, I'd be happy if you joined my server! 🎉
 
