@@ -208,6 +208,20 @@
                 border-radius: 0;
                 box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
             }
+            
+            .email-link {
+                color: var(--primary);
+                text-decoration: none;
+                transition: color 0.2s ease;
+            }
+
+            .email-link:hover {
+                color: #ff6b6b;
+            }
+
+.contact-text {
+    color: var(--primary);
+            }
         }
     </style>
 </head>
@@ -262,13 +276,13 @@
                     <li><i class="fab fa-discord"></i><a href="https://discord.gg/Efe5ws6jcP" target="_blank">Join My Discord Server</a></li>
                     <li><i class="fab fa-github"></i><a href="https://github.com/pingvortex" target="_blank">Check Out My GitHub</a></li>
                     <li><i class="fab fa-youtube"></i><a href="https://youtube.com/@pingvortex" target="_blank">Subscribe on YouTube</a></li>
-                    <li><i class="fa-solid fa-envelope"></i>Contact me - <a href="mailto:pingvortex@gmail.com">pingvortex@gmail.com</a></li>
+                    <li><i class="fa-solid fa-envelope"></i><span class="contact-text">Contact me</span> - <a href="mailto:pingvortex@gmail.com" class="email-link">pingvortex@gmail.com</a></li>
                 </ul>
             </div>
         </section>
 
         <footer>
-            <p>Created with ❤️ by <a href="https://github.com/pingvortex" target="_blank">PingVortex</a> | © 2025 All Rights Reserved</p>
+            <p>Created with ❤️ by <a href="https://github.com/pingvortex" target="_blank">PingVortex</a></p> <!-- | © 2025 All Rights Reserved -->
         </footer>
     </main>
 
