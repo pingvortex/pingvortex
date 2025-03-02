@@ -11,55 +11,66 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #2c003e, #9b5de5);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #1f0033, #6a1b9a);
             color: #fff;
             text-align: center;
+            line-height: 1.6;
             padding: 0;
         }
         header {
-            background-color: #1a001f;
-            padding: 50px 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            background-color: rgba(26, 0, 31, 0.9);
+            padding: 80px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
         }
         header h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             color: #ffffff;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 10px;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            background: linear-gradient(45deg, #9b5de5, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         header p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 300;
+            color: #d1c4e9;
             margin-bottom: 20px;
         }
         section {
-            padding: 50px 20px;
-            margin-top: 30px;
+            padding: 60px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
         section h2 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: #9b5de5;
-            margin-bottom: 20px;
-            font-weight: 600;
+            margin-bottom: 25px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         .bio, .skills, .contact, .links {
-            background-color: #1a001f;
-            padding: 40px;
+            background-color: rgba(26, 0, 31, 0.9);
+            padding: 50px;
             margin-bottom: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: background-color 0.3s ease;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(10px);
         }
-        .bio:hover, .skills:hover, .contact:hover, links:hover{
-            background-color: #2c003e;
+        .bio:hover, .skills:hover, .contact:hover, .links:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
         }
-        .bio p, .skills p, .contact p, .links p{
+        .bio p, .skills p, .contact p, .links p {
             font-size: 1.1rem;
             font-weight: 300;
+            color: #e0e0e0;
         }
         .skills ul, .links ul {
             list-style-type: none;
@@ -67,20 +78,28 @@
         }
         .skills li, .links li {
             font-size: 1.2rem;
-            margin: 10px 0;
+            margin: 15px 0;
             color: #fff;
             font-weight: 400;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .skills li i, .links li i {
+            margin-right: 10px;
+            color: #9b5de5;
         }
         footer {
-            background-color: #1a001f;
+            background-color: rgba(26, 0, 31, 0.9);
             padding: 20px 0;
             position: fixed;
             bottom: 0;
             width: 100%;
+            backdrop-filter: blur(10px);
         }
         footer p {
             font-size: 1rem;
-            color: #fff;
+            color: #d1c4e9;
         }
         footer a {
             color: #9b5de5;
@@ -88,64 +107,70 @@
             transition: color 0.3s ease;
         }
         footer a:hover {
-            color: #fff;
+            color: #ff6b6b;
+        }
+        a {
+            color: #9b5de5;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #ff6b6b;
         }
         /* Media Queries for Responsiveness */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
             section h2 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
-            .bio, .skills, .contact {
+            .bio, .skills, .contact, .links {
                 padding: 30px;
             }
         }
     </style>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
 <header>
     <h1>PingVortex</h1>
-    <p>Tech Enthusiast | Discord Bot Developer | AI Learner</p>
+    <p>Building Bots, Breaking Barriers | AI Explorer | Creative Coder</p>
 </header>
 
 <section class="bio">
     <h2>About Me</h2>
-    <p>Hi, I'm PingVortex! I'm a passionate tech enthusiast who loves working on Discord bots, learning Python, and diving into AI development. I enjoy sharing knowledge and building cool things for the community. In my free time, I want to create content on <a href="https://YouTube.com/@PingVortex" target="_blank">YouTube</a> and connect with like-minded individuals online.</p>
+    <p>Hey there! I’m PingVortex, a tech enthusiast with a passion for creating innovative Discord bots, exploring the depths of Python, and diving into the fascinating world of AI. I thrive on solving problems, building tools that make life easier, and sharing my journey through <a href="https://YouTube.com/@PingVortex" target="_blank">YouTube</a>. Whether it’s coding, learning, or connecting with the community, I’m always up for a new challenge!</p>
 </section>
 
 <section class="skills">
     <h2>Skills & Interests</h2>
     <ul>
-        <li>Discord Bot Development</li>
-        <li>Python Programming</li>
-        <li>AI & Machine Learning</li>
-        <li>Web Development (HTML, CSS, JavaScript)</li>
-        <li>YouTube Content Creation</li>
+        <li><i class="fas fa-robot"></i>Discord Bot Development</li>
+        <li><i class="fab fa-python"></i>Python Programming</li>
+        <li><i class="fas fa-brain"></i>AI & Machine Learning</li>
+        <li><i class="fas fa-code"></i>Web Development (HTML, CSS, JavaScript)</li>
+        <li><i class="fas fa-video"></i>YouTube Content Creation</li>
     </ul>
 </section>
 
 <section class="links">
-    <h2>Links</h2>
+    <h2>Let's Connect</h2>
     <ul>
-    <li><a href="https://discord.gg/Efe5ws6jcP" target="_blank">Discord server</a><i class="fa-brands fa-discord"></i></li>
-    <li><a href="https://github.com/pingvortex" target="_blank">GitHub</a><i class="fa-brands fa-github"></i></li>
-    <li><a href="https://youtube.com/@pingvortex" target="_blank">YouTube</a><i class="fa-brands fa-youtube"></i></li>
+        <li><a href="https://discord.gg/Efe5ws6jcP" target="_blank"><i class="fab fa-discord"></i>Join My Discord Server</a></li>
+        <li><a href="https://github.com/pingvortex" target="_blank"><i class="fab fa-github"></i>Check Out My GitHub</a></li>
+        <li><a href="https://youtube.com/@pingvortex" target="_blank"><i class="fab fa-youtube"></i>Subscribe on YouTube</a></li>
     </ul>
 </section>
 
 <section class="contact">
-    <h2>Contact</h2>
-    <p>If you'd like to get in touch, feel free to connect with me on my <a href="https://discord.gg/Efe5ws6jcP" target="_blank">Discord server</a> or reach out via email at <a href="mailto:pingvortex@gmail.com">pingvortex@gmail.com</a>.</p>
+    <h2>Get in Touch</h2>
+    <p>If you’d like to collaborate, chat about tech, or just say hi, feel free to join my <a href="https://discord.gg/Efe5ws6jcP" target="_blank">Discord server</a> or drop me an email at <a href="mailto:pingvortex@gmail.com">pingvortex@gmail.com</a>. Let’s build something amazing together!</p>
 </section>
 
 <footer>
-    <p>Created by <a href="https://github.com/pingvortex" target="_blank">PingVortex</a> | All Rights Reserved</p>
+    <p>Created with ❤️ by <a href="https://github.com/pingvortex" target="_blank">PingVortex</a> | © 2025 All Rights Reserved</p>
 </footer>
 
 </body>
