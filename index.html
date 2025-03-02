@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PingVortex</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #2c003e, #9b5de5);
+            color: #fff;
+            text-align: center;
+            padding: 0;
+        }
+        header {
+            background-color: #1a001f;
+            padding: 50px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        header h1 {
+            font-size: 3.5rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        section {
+            padding: 50px 20px;
+            margin-top: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        section h2 {
+            font-size: 2.5rem;
+            color: #9b5de5;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .bio, .skills, .contact {
+            background-color: #1a001f;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
+        }
+        .bio:hover, .skills:hover, .contact:hover {
+            background-color: #2c003e;
+        }
+        .bio p, .skills p, .contact p {
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills li {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: #fff;
+            font-weight: 400;
+        }
+        footer {
+            background-color: #1a001f;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            font-size: 1rem;
+            color: #fff;
+        }
+        footer a {
+            color: #9b5de5;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #fff;
+        }
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            section h2 {
+                font-size: 2rem;
+            }
+            .bio, .skills, .contact {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>PingVortex</h1>
+    <p>Tech Enthusiast | Discord Bot Developer | AI Learner</p>
+</header>
+
+<section class="bio">
+    <h2>About Me</h2>
+    <p>Hi, I'm PingVortex! I'm a passionate tech enthusiast who loves working on Discord bots, learning Python, and diving into AI development. I enjoy sharing knowledge and building cool things for the community. In my free time, I want tp create content on YouTube and connect with like-minded individuals online.</p>
+</section>
+
+<section class="skills">
+    <h2>Skills & Interests</h2>
+    <ul>
+        <li>Discord Bot Development</li>
+        <li>Python Programming</li>
+        <li>AI & Machine Learning</li>
+        <li>Web Development (HTML, CSS, JavaScript)</li>
+        <li>YouTube Content Creation</li>
+    </ul>
+</section>
+
+<section class="contact">
+    <h2>Contact</h2>
+    <p>If you'd like to get in touch, feel free to connect with me on my Discord server or reach out via email at <a href="mailto:pingvortex@example.com">pingvortex@example.com</a>.</p>
+</section>
+
+<footer>
+    <p>Created by <a href="https://github.com/pingvortex" target="_blank">PingVortex</a> | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
