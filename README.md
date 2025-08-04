@@ -1,6 +1,8 @@
 [![GitHub Stats](https://github-readme-stats.vercel.app/api?username=PingVortex&show_icons=true&theme=radical)](https://github.com/PingVortex)
 [![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=PingVortex&layout=compact&theme=radical)](https://github.com/PingVortex)
 
+[![Discord Presence](https://lanyard.cnrad.dev/api/1320716531067523124?theme=dark)](https://discord.com/users/1320716531067523124)
+
 ### Languages I know
 ![Rust](https://img.shields.io/badge/-Rust-000000?style=flat&logo=rust&logoColor=white)
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)
